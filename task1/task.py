@@ -8,6 +8,7 @@
 
 
 def checkOccurences():
+    # flag to check if para is empty or not
     check = True
     # take paragraph from user
     para = input("Enter a paragraph ")
@@ -32,13 +33,15 @@ def checkOccurences():
                 # check if the word exists in dict increase its value by one 
                 if word in occurences:
                     occurences[word] +=1
+                # ignore spaces
                 elif word=='':
                     continue
-                # if not exist add the word an put 1 as its value
+                # if not exist add the word and put 1 as its value
                 else:
                     occurences[word]=1
             print(occurences)
             check=False
+        # handle empty paragraph
         else:
             print('Enter non-empty paragraph ')
             para = input("Enter a paragraph ")
