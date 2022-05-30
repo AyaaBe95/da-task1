@@ -10,7 +10,17 @@ def checkOccurences():
     para = input("Enter a paragraph ")
     # split the paragraph and store it in a list of strings
     splitedPara = para.split(' ')
-    print(splitedPara)
+    # create dictionarry
+    occurences = {}
+    # loop over the list 
+    for word in splitedPara:
+        # check if the word exists in dict increase its value by one 
+        if word in occurences:
+            occurences[word] +=1
+        # if not exist add the word an put 1 as its value
+        else:
+            occurences[word]=1
+    print(occurences)
 
 checkOccurences()
 
